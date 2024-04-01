@@ -17,11 +17,11 @@ public class MovieController {
 
     @GetMapping
     public ResponseEntity<List<Movie>> allMovies() {
-        return new ResponseEntity<List<Movie>>(movieService.allMovies(), HttpStatus.OK);
+        return new ResponseEntity<>(movieService.allMovies(), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Movie>> getMovie(@PathVariable String id) {
-        return new ResponseEntity<Optional<Movie>>(movieService.getMovie(id), HttpStatus.OK);
+        return new ResponseEntity<>(movieService.getMovie(id), HttpStatus.OK);
     }
 }
